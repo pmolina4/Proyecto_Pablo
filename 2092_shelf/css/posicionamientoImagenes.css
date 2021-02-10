@@ -1,0 +1,22 @@
+* {
+  box-sizing:border-box;
+}
+
+body {
+  background: rgba(0, 0, 128, 0.1) /* Azul al 10% */
+}
+.imgD {
+  float:right;
+  margin:10px;
+  width:35%;
+  height:auto;
+  object-fit:cover;
+}
+.imgI {
+  float:left;
+  margin:10px;
+  clear:right;
+  width:35%;
+  height:auto;
+  object-fit:cover;
+}
