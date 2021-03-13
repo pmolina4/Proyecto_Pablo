@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!--
+HTML
+web o pagina:
+autor: Carlos Boni
+fecha: Marzo 2021
+-->
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- importante SEO para la etiqueta del navegador -->
+	<title>Titulo en Etiqueta del Navegador</title>
+
+	<!-- una fuente de Google -->
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet" />
+
+	<!-- una hoja de estilos externa-->
+	<link href="trabajo.css" rel="stylesheet" />
+	<!-- una hoja de estilos personalizada-->
+	<link href="00-modelo.cs" rel="stylesheet" />
+
+	<!-- iconos u otros elementos externos -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+	<!-- scripts externos de librerias que usaremos, por ejemplo Bootstrap o JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript" src="clicks.js"> </script>
+
+	<!-- scripts externos de desarrollo propio en Javascript o JQuery -->
+	<script src="00-modelo.js"></script>
+	<link rel="shortcut icon" type="image/jpg" href="imagenes/logo.ico"/>
+</head>
+
+
+<body>
+
+	<div class="marco">
+		<div class="encabezado">
+			<div class="menu">
+				<nav>
+					<ul>
+						<li  onclick="onClick()"><a href="index.html">Inicio</a></li>
+						<li><a href="#">Actualidad</a></li>
+						<li><a href="#">Tendencias</a></li>
+						<li><a href="#">Contactar</a></li>
+						<span id="contador"style="text-align:right; padding-left: 20%;"></span>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="migas">
+			<ul class="breadcrumb">
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="#">Actualidad</a></li>
+			</ul>
+		</div>
+		<div class="lado">
+			<div class="vertical-menu">
+				<nav>
+					<ul>
+						<li  onclick="onClick()"><a href="index.html">Inicio</a></li>
+						<li><a href="#">Actualidad</a></li>
+						<li><a href="#">Tendencias</a></li>
+						<li><a href="#">Contactar</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="contenido">
+			<div class="imagen">
+					<img class="imgCiberseguridad" src="imagenes/ciberseguridad.jpg">
+			</div>
+			<div class="ciber1">
+				<h1>Ciberseguridad</h1></br>
+				La ciberseguridad es la práctica de defender las computadoras, los servidores, los dispositivos móviles, los sistemas electrónicos, las redes y los datos de ataques maliciosos. También se conoce como seguridad de tecnología de la información o seguridad de la información electrónica. El término se aplica en diferentes contextos, desde los negocios hasta la informática móvil, y puede dividirse en algunas categorías comunes.
+			</div>
+			<div class="imagen2">
+					<img class="imgCiberseguridad" src="imagenes/phishing.png">
+			</div>
+			<div class="ciber2">
+				<h1>Phishing</h1></br>
+				<p id="phishing">Phishing es un término informático que distingue a un conjunto de técnicas que persiguen el engaño a una víctima ganándose su confianza haciéndose pasar por una persona, empresa o servicio de confianza, para manipularla y hacer que realice acciones que no debería realizar</p>
+			</div>
+			<div class="imagen3">
+					<img class="imgCiberseguridad" src="imagenes/kaspersky.jpg">
+			</div>
+			<div class="ciber3">
+				<h1>Suplantación De Identidad</h1></br>
+				<p id="kaspersky">La suplantación de identidad está tipificada como delito en el Código Penal y consiste en hacerse pasar por otra persona para obtener un beneficio al que se no tiene derecho.</p>
+			</div>
+			<div class="imagen4">
+					<img class="imgCiberseguridad" src="imagenes/inyeccion.png">
+			</div>
+			<div class="ciber4">
+				<h1>Inyección De Código</h1></br>
+				<p id="inyeccion">Un defecto de inyección de código ocurre cuando es posible enviar datos inesperados a un intérprete. Estos son muy comunes en código antiguo. Se encuentran frecuentemente en consultas SQL, LDAP, Xpath o NoSQL; comandos de sistema operativo; analizadores sintácticos de XML; cabeceras SMTP; parámetros de funciones</p>
+			</div>
+		</div>
+		<div class="pie">
+			Contacto : pablomolina@cenec.es 2021
+		</div>
+	</div>
+
+
+</body>
+
+</html>
