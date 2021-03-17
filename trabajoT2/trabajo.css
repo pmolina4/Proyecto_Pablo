@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -15,7 +15,6 @@
 }
 
 .encabezado {
-
   grid-column: 1 / span 2;
   grid-row: 1 / span 1;
 }
@@ -45,104 +44,83 @@
   padding-top: 0.5%;
 }
 
-.menu{
-  background-color:grey;
+.menu {
+  background-color: grey;
   width: 100%;
   height: 100%;
 }
 
-nav a{
-    text-decoration:none;
-    color:inherit;
-    font-size:20px;
-    }
-    nav li{
-    margin-top:1%;
-    display:inline-block;
-    background-color:grey;
-    text-align:center;
-    margin-left: 10%;
-    color:Black;
-    }
-    nav li:hover{
-      color:white;
-    }
-
-.imgCiberseguridad{
-width: 100%;
-height:100%;
-float: left;
+nav a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 20px;
 }
 
-.imagen{
-  float: right;
-  margin-left: 10px;
-  width: 30%;
-  margin-top: 15px;
-  padding: 1%;
+nav li {
+  margin-top: 1%;
+  display: inline-block;
+  background-color: grey;
+  text-align: center;
+  margin-left: 10%;
+  color: Black;
 }
 
-.imagen2{
-  float: right;
-  margin-left: 10px;
-  width: 30%;
-  margin-top: 15px;
-  padding: 1%;
+nav li:hover {
+  color: white;
 }
 
-.imagen3{
-  float: left;
-  margin-left: 10px;
-  width: 30%;
-  margin-top: 15px;
-  padding: 1%;
-  margin-top: 10%;
-}
-.imagen4{
-  float: right;
-  margin-left: 10px;
-  width: 30%;
-  margin-top: 13%;
-  padding: 1%;
+.imgCiberseguridad {
+  width: 100%;
 }
 
-.cuerpo{
+.imagen {
+  width: 100%;
+}
+
+.imagen2 {
+  width: 100%;
+}
+
+.imagen3 {
+  width: 100%;
+}
+
+.imagen4 {
+  width: 100%;
+}
+
+.cuerpo {
   padding: 2%;
   text-align: justify;
 }
 
-.ciber1{
+.ciber1 {
   display: flex;
-  width: 50%;
-  height: auto;
-  padding-top: 3%;
   color: grey;
 }
 
-.ciber2{
-  width: 80%;
-  height: auto;
-  padding-top: 3%;
+.ciber2 {
+  display: flex;
   color: grey;
-  text-align: right;
 }
-.ciber3{
-  width: 80%;
-  height: auto;
-  padding-top: 12%;
+
+.ciber3 {
+  display: flex;
   color: grey;
-  text-align: justify;
 }
-.ciber4{
-  width: 80%;
-  height: auto;
-  padding-top: 15%;
+
+.ciber4 {
+  display: flex;
   color: grey;
-  text-align: right;
 }
+
+.cont1 {
+  display: flex;
+}
+
 .vertical-menu {
   width: 100%;
-  background-color:grey;
+  background-color: grey;
   height: 100%;
   text-align: center;
 }
@@ -150,7 +128,7 @@ float: left;
 .vertical-menu a {
   color: black;
   display: block;
-  padding: 60px;
+  padding: 30px;
   height: 100%;
   width: 100%;
   text-decoration: none;
@@ -158,13 +136,14 @@ float: left;
 }
 
 .vertical-menu a:hover {
-color: white;
+  color: white;
 }
 
 .vertical-menu a.active {
   background-color: #4CAF50;
   color: white;
 }
+
 ul.breadcrumb {
   padding: 10px 16px;
   list-style: none;
