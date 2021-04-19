@@ -1,20 +1,177 @@
 body{
-  font-family: 'Titillium Web', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
 }
 
-.navbar {
-  background-color: grey;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05);
-  min-height: 100px;
+h1{
+    font-size: 66px;
+    font-weight: 600;
+    line-height: 80px;
+    padding-top: 90px;
 }
 
-.nav-link {
-  color: white;
+h2{
+    font-size: 48px;
+    margin-bottom: 30px;
 }
 
-.nav-link:hover { color:black; }
+p{
+    font-size: 18px;
+    line-height: 1.8;
+    padding-top: 30px;
+    margin-bottom: 0;
+}
 
-.logo-brand{
-  min-width: 100px;
-  max-width: 120px;
+a:hover{
+    text-decoration: none;
+}
+
+section{
+    padding: 120px 0;
+}
+
+.bg-light-grey{
+    background-color: #f5f5f5;
+}
+
+.topmargin-xs{ margin-top: 15px; }
+.topmargin-sm{ margin-top: 30px; }
+.topmargin-lg{ margin-top: 60px; }
+
+.boton{
+    font-size: 14px;
+    padding: 15px 26px;
+    min-width: 160px;
+    border-radius: 2px;
+    display: inline-block;
+}
+
+.boton-blanco{
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+}
+
+.text-dark{
+    color: rgb(153, 146, 146);
+}
+
+.text-black{
+    color: rgb(13, 14, 15);
+}
+
+.navbar{
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05);
+    min-height: 100px;
+}
+
+.nav-link{ color: black;}
+
+.nav-link:hover{color: grey;}
+
+.logo{
+    min-width: 60px;
+    max-width: 80px;
+}
+
+.navbar-toggler { font-size: 40px;}
+
+.navbar-toggler:hover{ outline: none;}
+
+#hero{
+    background-image: url('imagenes/principal.jpg');
+    background-size: cover;
+    padding-top: 90px;
+    min-height: 500px;
+    color: white;
+}
+
+#hero p{
+    color: white;
+}
+
+.content-center {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+}
+
+.portfolio-container {
+    position: relative;
+    overflow: hidden;
+    margin: 10px 0;
+    border-radius: 2px;
+}
+
+.img-fluid{
+   width: 100%;
+}
+
+.portfolio-container img {
+    -moz-transition: all 0.8s;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+.portfolio-container:hover img {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.portfolio-details {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    z-index: 9000;
+}
+
+.portfolio-details h2 {
+margin-bottom: 0px;
+}
+
+.portfolio-details a h2, .portfolio-details a p {
+    color: white;
+}
+
+.member-container{
+    position: relative;
+    margin: 10px 0;
+}
+
+.member-details{
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    z-index: 9000;
+}
+
+.bg-dark{
+    background-color: #1a1a1a !important;
+}
+
+#footer{
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+}
+
+#footer a{
+    color: white;
+}
+
+#footer a:hover{
+    color: white;
+}
+
+#footer .list-inline .list-inline-item{
+    padding: 10px 15px;
+}
+
+@media (max-width: 575.98px){
+    .footer-menu{
+        display: block !important;
+        padding: 20px 0 !important;
+        font-size: 20px;
+    }
 }

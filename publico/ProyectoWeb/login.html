@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login y Registro</title>
+    <link rel="stylesheet" href="loginStyle.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="cajaTrasera">
+            <div class="cajaTrasera-Login">
+                <h3>¿Ya tienes una cuenta?</h3>
+                <p>Inicia sesión para entrar en la página</p>
+                <button id="boton-IniciarSesion" onclick=IniciarSesion()>Iniciar Sesión</button>
+            </div>
+            <div class="cajaTrasera-Register">
+                <h3>¿Aún no tienes cuenta?</h3>
+                <p>Regístrate para que puedas iniciar sesión</p>
+                <button id="boton-Registrar" onclick=registrar()>Regístrate</button>
+            </div>
+        </div>
+
+        <div class="login-register">
+            <form class="formulario-login">
+                <h2>Iniciar Sesión</h2>
+                <input type="text" placeholder="Usuario" class="login_usuario" id="usuarioLogin">
+                <input type="password" placeholder="Contraseña" class="login_password" id="contrasenaLogin">
+                <button id="bEntrar" onclick=crearLogin()>Entrar</button>
+            </form>
+            <form class="formulario-registrar">
+                <h2>Regístrarse</h2>
+                <input type="text" placeholder="Nombre completo" class="nombre" required>
+                <input type="text" placeholder="Correo electrónico" class="correo" required>
+                <input type="text" placeholder="Usuario" class="registro_usuario" id="usuarioRegistro" required>
+                <input type="password" placeholder="Contraseña" class="registro_password"  id="contrasenaRegistro" required>
+                <button id="bRegistrarse" onclick=crearRegistro()>Regístrarse</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
