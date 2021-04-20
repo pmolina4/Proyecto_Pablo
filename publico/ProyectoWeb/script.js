@@ -13,23 +13,25 @@ var usuarioCheck= "";
 //Funciones
 var nombUsu = [];
 var passUsu = [];
-
+nombUsu[0]=localStorage.getItem("usuario");//local no borra sesion si 
+passUsu[0]=localStorage.getItem("pass");
 function crearRegistro(){
     var nuevoUsuario = document.getElementById("usuarioRegistro").value
     var nuevaContraseña = document.getElementById("contrasenaRegistro").value
     nombUsu.push(nuevoUsuario);
     passUsu.push(nuevaContraseña);
     console.log(nombUsu[0] + "\n" + passUsu[0]);
+    localStorage.setItem("usuario",nuevoUsuario[0]);
+    localStorage.setItem("pass",nuevaContraseña[0]);
 }
 
 function crearLogin(){
-
     var usuario = document.getElementById('usuarioLogin').value
-    var pass = document.getElementById('contrasenaLogin').value
+    var password = document.getElementById('contrasenaLogin').value
     for (var i = 0; i < nombUsu.length; i++){
         if(nombUsu[i]==usuario){
-            if(passUsu[i]==pass){
-                alert("Bienvenido " +passUsu[i] + " !");
+            if(passUsu[i]==password){
+                alert("Bienvenido " +passUsu[0] + " !");
             } else {
                 alert("Contraseña incorrecto!");
             }
@@ -42,6 +44,35 @@ function crearLogin(){
 function escribir(usuarioCheck){
     document.getElementById('usuario_logeado').innerHTML = usuarioCheck + ' Bienvenido'
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

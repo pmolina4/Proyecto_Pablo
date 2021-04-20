@@ -124,6 +124,13 @@ body{
     display: none;
 }
 
+#btVolver{
+    margin-left: 0px;
+}
+
+#bVolver{
+    margin-right: 0px;
+}
 
 /*Trabajando en el responsive*/
 
