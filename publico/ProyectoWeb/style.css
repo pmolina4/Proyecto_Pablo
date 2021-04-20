@@ -150,6 +150,10 @@ margin-bottom: 0px;
     background-color: #1a1a1a !important;
 }
 
+#login{
+    padding-left: 70px;
+}
+
 #footer{
     padding: 80px 0;
     text-align: center;
