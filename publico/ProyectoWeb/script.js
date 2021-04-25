@@ -8,79 +8,54 @@ var formulario_register = document.querySelector(".formulario-registrar")
 var cajaTrasera_Login = document.querySelector(".cajaTrasera-Login")
 var cajaTrasera_Register = document.querySelector(".cajaTrasera-Register")
 
-var usuarioCheck= "";
+
+var nombUsu = ["USR1", "USR2", "USR3", "USR4", "PABLO"];
+var passUsu = ["CLAVE1", "CLAVE2", "CLAVE3", "CLAVE4", "MOLINA"];
+
+nombUsu[5] = localStorage.getItem("usuario");//local no borra sesion si 
+passUsu[5] = localStorage.getItem("pass");
+
+var usuarioCheck = false; 
 
 //Funciones
-var nombUsu = [];
-var passUsu = [];
-nombUsu[0]=localStorage.getItem("usuario");//local no borra sesion si 
-passUsu[0]=localStorage.getItem("pass");
-function crearRegistro(){
+
+
+function crearRegistro() {
     var nuevoUsuario = document.getElementById("usuarioRegistro").value
     var nuevaContraseña = document.getElementById("contrasenaRegistro").value
     nombUsu.push(nuevoUsuario);
     passUsu.push(nuevaContraseña);
-    console.log(nombUsu[0] + "\n" + passUsu[0]);
-    localStorage.setItem("usuario",nuevoUsuario[0]);
-    localStorage.setItem("pass",nuevaContraseña[0]);
+    localStorage.setItem("usuario", nuevoUsuario[5]);
+    localStorage.setItem("pass", nuevaContraseña[5]);
 }
 
-function crearLogin(){
+function crearLogin() {
     var usuario = document.getElementById('usuarioLogin').value
     var password = document.getElementById('contrasenaLogin').value
-    for (var i = 0; i < nombUsu.length; i++){
-        if(nombUsu[i]==usuario){
-            if(passUsu[i]==password){
-                alert("Bienvenido " +passUsu[0] + " !");
-            } else {
-                alert("Contraseña incorrecto!");
-            }
-        } else {
-            alert("Nombre de usuario incorrecto!");
+    var posicion = 0;
+    for (var i = 0; i < nombUsu.length; i++) {
+        if (usuario == nombUsu[i]) {
+            posicion = i;
         }
+    }
+    if (password == passUsu[posicion]) {
+        alert("Bienvenido " + nombUsu[posicion] + " !!!!");
+        usuarioCheck = true;
+    } else {
+        alert("contrseña incorrecta");
+        usuarioCheck = false;
     }
 }
 
-function escribir(usuarioCheck){
+//para escribir en html desde js
+function escribiir(usuarioCheck) {
     document.getElementById('usuario_logeado').innerHTML = usuarioCheck + ' Bienvenido'
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function escribir() {
+   
+}
 
 
 
