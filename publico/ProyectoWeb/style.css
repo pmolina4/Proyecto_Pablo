@@ -172,6 +172,10 @@ margin-bottom: 0px;
     padding: 10px 15px;
 }
 
+#logout{
+    display: none;
+}
+
 @media (max-width: 575.98px){
     .footer-menu{
         display: block !important;

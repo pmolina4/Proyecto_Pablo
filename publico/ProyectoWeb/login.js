@@ -1,68 +1,58 @@
-function validar() {
+function leerXML() {
+    // lee desde GitHub.
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        miFuncion(this);
+      }
+    };
+    xhr.open("GET", "https://github.com/pmolina4/Proyecto_Pablo/blob/master/publico/ProyectoWeb/registrados.xml", true);
+    xhr.send();
+  }
 
-    if (window.XMLHttpRequest) {
+  function miFuncion(xml) {
+    var i;
+    var xmlDoc = xml.responseXML;
+    var x = xmlDoc.getElementsByTagName("usuario");
+    var checking = false;
+    var nombreUsuario = document.getElementById("usuarioLogin").value;
+    var passwordUsuario = document.getElementById("contrasenaLogin").value;
+    for (i = 0; i < x.length; i++) {
+        if (x[i].getElementsByTagName("nombre")[0].childNodes[0].nodeValue == nombreUsuario) {
+            if (x[i].getElementsByTagName("clave")[0].childNodes[0].nodeValue == passwordUsuario) {
+                checking = true;
+                if (typeof(Storage) !== 'undefined') {
+                    sessionStorage.setItem("usuario",nombreUsuario);
+                } else {
+                    alert("El navegador no es compatible con SessionStorage.")
+                }
+                break;
+            }
+          }
+        }
+        if(checking==true){
+            alert("Bienvenido, "+ nombreUsuario)
+            window.history.go(-1)
+        }
+        }
 
-        // Objeto para IE7+, Firefox, Chrome, Opera, Safari
-
-        xmlhttp = new XMLHttpRequest();
-
-    } else {
-
-        // Objeto para IE6, IE5
-
-        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-
-    }
-
-    // Abrimos el archivo que esta alojado en el servidor cd_catalog.xml
-
-    xmlhttp.open("GET", "registrados.xml", false);
-
-    xmlhttp.send();
-
-
-
-    // Obtenemos un objeto XMLDocument con el contenido del archivo xml del servidor
-
-    xmlDoc = xmlhttp.responseXML;
-
-
-
-    // Obtenemos todos los nodos denominados usuario del archivo xml
-
-    var foros = xmlDoc.getElementsByTagName("usuario");
-
-
-
-    // Hacemos un bucle por todos los elementos usuario
-
-    for (var i = 0; i < foros.length; i++) {
-
-        // Del elemento usuario, obtenemos del primer elemento denominado "nombre"
-
-        // el valor del primer elemento interno
-
-        titulo = foros[i].getElementsByTagName("nombre")[0].childNodes[0].nodeValue
-
-
-
-        url = foros[i].getElementsByTagName("clave")[0].childNodes[0].nodeValue
- 
-
-
-        document.write("<div>");
-
-        document.write("<span>");
-
-        document.write(nombre);
-
-        document.write("</span><span>");
-
-        document.write(clave);
-
-        document.write("</span>");
-
-        document.write("</div>");
-
-    }
-}
+        function checking(){
+            if(sessionStorage.getItem("usuario").length>0){
+              document.getElementById("login").style.display="none";
+              document.getElementById("logout").style.display="inline-block";
+              //document.getElementById("conexionUsuario").innerHTML = sessionStorage.getItem("usuario");
+            }
+          }
+          window.onload = function launch(){
+            checking();
+          }
+      
+          function logOut() {
+            if (typeof (Storage) !== "undefined") {
+        if(confirm("¿Estás seguro?")){
+                sessionStorage.removeItem("usuario");
+        location.reload();
+            } 
+            return false;
+        }
+  }
