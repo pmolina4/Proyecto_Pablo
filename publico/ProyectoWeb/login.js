@@ -8,6 +8,7 @@ function leerXML() {
     };
     xhr.open("GET", "https://pmolina4.github.io/Proyecto_Pablo/publico/ProyectoWeb/xml/registrados.xml", true);
     xhr.send();
+    
   }
 
   function miFuncion(xml) {
