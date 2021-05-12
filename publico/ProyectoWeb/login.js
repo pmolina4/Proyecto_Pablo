@@ -8,7 +8,7 @@ function leerXML() {
     };
     xhr.open("GET", "https://pmolina4.github.io/Proyecto_Pablo/publico/ProyectoWeb/xml/registrados.xml", true);
     xhr.send();
-    
+
   }
 
   function miFuncion(xml) {
@@ -41,7 +41,7 @@ function leerXML() {
             if(sessionStorage.getItem("usuario").length>0){
               document.getElementById("login").style.display="none";
               document.getElementById("logout").style.display="inline-block";
-              //document.getElementById("conexionUsuario").innerHTML = sessionStorage.getItem("usuario");
+              document.getElementById("usuariolog").innerHTML = sessionStorage.getItem("usuario");
             }
           }
           window.onload = function launch(){
