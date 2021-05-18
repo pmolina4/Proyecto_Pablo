@@ -176,6 +176,7 @@ margin-bottom: 0px;
     display: none;
 }
 
+/* Media Tablets */
 @media (max-width: 575.98px){
     .footer-menu{
         display: block !important;
@@ -183,3 +184,118 @@ margin-bottom: 0px;
         font-size: 20px;
     }
 }
+
+/* Media Effects */
+@media (max-width: 750px){
+    .container-dolly{
+        display:none;
+    }
+    .image-wrap{
+        display: none;
+    }
+}
+
+
+/* Dolly Zoom */
+.container-dolly{  
+    width: 100%;
+  max-width: 1060px;
+  background: #000;
+  overflow: hidden;
+  margin: 25px auto;
+  position: relative;
+  height: 600px;
+}
+  .container-dolly:hover .background {
+    -webkit-transform: scale(0.8) translate(-50%, -50%);
+        -ms-transform: scale(0.8) translate(-50%, -50%);
+            transform: scale(0.8) translate(-50%, -50%);
+  }
+  .container-dolly:hover .front {
+    -webkit-transform: scale(1.4);
+        -ms-transform: scale(1.4);
+            transform: scale(1.4);
+  }
+  
+  .background {
+    background: url(https://i.redd.it/ngu5ofssout01.png) no-repeat fixed center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    width: 1411px;
+    height: 717px;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transform-origin: top left;
+        -ms-transform-origin: top left;
+            transform-origin: top left;
+    -webkit-transition: -webkit-transform 1500ms;
+            transition: transform 1500ms;
+  }
+  
+  .front {
+    background: url(https://static.escapeqr.com/img/btc_3stack_288.png) no-repeat fixed center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;   
+    z-index: 1;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    height: 50%;
+    width: 30%;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: -webkit-transform 1500ms;
+            transition: transform 1500ms;
+  }
+  
+  /* Ken Burns */
+  .image-wrap {
+    width: 100%;
+  max-width: 1060px;
+  overflow: hidden;
+  margin: 25px auto;
+  position: relative;
+  height: 600px;
+  }
+  
+  .image-wrap img {
+    width: 100%;
+    animation: move 40s ease;
+    -ms-animation: move 40s ease;
+    -webkit-animation: move 40s ease;
+    -moz-animation: move 40s ease;
+    position: absolute;
+  }
+  
+  @-webkit-keyframes move {
+    0% {
+      -webkit-transform-origin: bottom left;
+      -moz-transform-origin: bottom left;
+      -ms-transform-origin: bottom left;
+      -o-transform-origin: bottom left;
+      transform-origin: bottom left;
+      transform: scale(1.0);
+      -ms-transform: scale(1.0);      
+      -webkit-transform: scale(1.0);      
+      -o-transform: scale(1.0);      
+      -moz-transform: scale(1.0);
+    }
+    100% {
+      transform: scale(1.2);
+      -ms-transform: scale(1.2);      
+      -webkit-transform: scale(1.2);      
+      -o-transform: scale(1.2);      
+      -moz-transform: scale(1.2);
+    }
+  }
