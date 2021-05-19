@@ -9,53 +9,6 @@ var cajaTrasera_Login = document.querySelector(".cajaTrasera-Login")
 var cajaTrasera_Register = document.querySelector(".cajaTrasera-Register")
 
 
-var nombUsu = ["USR1", "USR2", "USR3", "USR4", "PABLO"];
-var passUsu = ["CLAVE1", "CLAVE2", "CLAVE3", "CLAVE4", "MOLINA"];
-
-nombUsu[5] = localStorage.getItem("usuario");//local no borra sesion si 
-passUsu[5] = localStorage.getItem("pass");
-
-var usuarioCheck = false; 
-
-//Funciones
-
-
-function crearRegistro() {
-    var nuevoUsuario = document.getElementById("usuarioRegistro").value
-    var nuevaContraseña = document.getElementById("contrasenaRegistro").value
-    nombUsu.push(nuevoUsuario);
-    passUsu.push(nuevaContraseña);
-    localStorage.setItem("usuario", nuevoUsuario[5]);
-    localStorage.setItem("pass", nuevaContraseña[5]);
-}
-
-function crearLogin() {
-    var usuario = document.getElementById('usuarioLogin').value
-    var password = document.getElementById('contrasenaLogin').value
-    var posicion = 0;
-    for (var i = 0; i < nombUsu.length; i++) {
-        if (usuario == nombUsu[i]) {
-            posicion = i;
-        }
-    }
-    if (password == passUsu[posicion]) {
-        alert("Bienvenido " + nombUsu[posicion] + " !!!!");
-        usuarioCheck = true;
-    } else {
-        alert("contrseña incorrecta");
-        usuarioCheck = false;
-    }
-}
-
-//para escribir en html desde js
-function escribiir(usuarioCheck) {
-    document.getElementById('usuario_logeado').innerHTML = usuarioCheck + ' Bienvenido'
-}
-
-
-function escribir() {
-   
-}
 
 
 

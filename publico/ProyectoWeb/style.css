@@ -299,3 +299,7 @@ margin-bottom: 0px;
       -moz-transform: scale(1.2);
     }
   }
+
+  .volver{
+    align-items: left;
+  }
