@@ -41,7 +41,6 @@ function leerXML() {
               document.getElementById("login").style.display="none";
               document.getElementById("logout").style.display="inline-block";
               document.getElementById("usuariolog").innerHTML = sessionStorage.getItem("usuario");
-              document.getElementById("DOLLYUSER").innerHTML = sessionStorage.getItem("usuario");
             }
           }
           window.onload = function launch(){
