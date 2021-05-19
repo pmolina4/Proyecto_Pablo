@@ -32,8 +32,8 @@ function leerXML() {
         }
         if(checking==true){
             alert("Bienvenido, "+ nombreUsuario)
-            window.history.go(-1)
-        }
+            window.location.href = "index.html";
+          }
         }
 
         function checking(){
