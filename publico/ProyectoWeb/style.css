@@ -300,6 +300,10 @@ margin-bottom: 0px;
     }
   }
 
-  .volver{
-    align-items: left;
+  #btVolver{
+    margin-left: 0%;
+  }
+
+  #btPdf{
+    margin-right: 20%;
   }

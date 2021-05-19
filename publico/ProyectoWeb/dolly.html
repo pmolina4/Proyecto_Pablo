@@ -16,9 +16,8 @@
 </head>
 
 <body>
-        <!-- Menú -->
+  <!-- Menú -->
   <div class="container-fluid">
-    <div class="col-sm-12">
       <nav class="navbar navbar-expand-lg fixed-top ">
         <div class="container">
           <a class="navbar-brand" href="#"><img src="imagenes\logo.png" alt="logo" class="logo"></a>
@@ -28,20 +27,21 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html" id="Volver" class="menu-outline">Volver</a>
-              </li>
               <li class="nav-item">
-                <a class="nav-link" href="#effects" id="comoProtegerte">Efectos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="" onclick="logOut()" id="logout"><span id="usuariolog"></span>  Logout</a>
+                <a class="nav-link" href="" onclick="logOut()" id="logout"><span id="usuariolog"></span> Logout</a>
               </li>
             </ul>
           </div>
         </div>
+        <div>
+          <a class="btn btn-primary" href="index.html" role="button" id="btVolver">VOLVER</a>
+        </div>
+        <div>
+          <a class="btn btn-primary"
+            href="./Archivos/Efectos.pdf"
+            role="button" id="btPdf">PDF</a>
+        </div>
       </nav>
-    </div>
   </div>
 
 
@@ -51,13 +51,13 @@
       <div class="background"></div>
       <div class="front"></div>
     </div>
-  
+
     <!-- Ken Burns -->
     <div class="image-wrap">
       <img src="https://i.pinimg.com/originals/77/b4/58/77b458a08298987fb947b23aff3d695f.png">
     </div>
   </div>
-  
+
 
   <!-- Footer -->
   <section id="footer" class="bg-dark">
@@ -74,5 +74,6 @@
     </div>
   </section>
 
-
+  <script src="script.js"></script>
+  <script src="login.js"></script>
 </body>
