@@ -41,6 +41,7 @@ function leerXML() {
               document.getElementById("login").style.display="none";
               document.getElementById("logout").style.display="inline-block";
               document.getElementById("usuariolog").innerHTML = sessionStorage.getItem("usuario");
+              console.log(nombreUsuario)
             }
           }
           window.onload = function launch(){
