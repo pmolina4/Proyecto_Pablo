@@ -197,6 +197,11 @@ margin-bottom: 0px;
     .image-wrap{
         display: none;
     }
+iframe {
+    display: none;
+}
+
+
 }
 
 
@@ -312,7 +317,8 @@ margin-bottom: 0px;
     margin-right: 20%;
   }
 
-  #ciberamenaza{
-      width: 100%;
-      height: 100%;
-  }
+iframe {
+    width: 1500px;
+    height: 1000px;
+    margin-left: -40%;
+}
