@@ -9,12 +9,19 @@
     <link rel="stylesheet" href="loginStyle.css">
     <!--boostrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
     <div>
         <a class="btn btn-primary" href="index.html" role="button" id="btVolver">VOLVER</a>
     </div>
+    <div class="edit">
+        <a class="btn btn-primary"  role="button" id="cambiarModo" onclick="modoNoche()">ModoGris</a>
+        <a class="btn btn-primary"  role="button" id="cambiarModo" onclick="modoDia()">Restablecer</a>
+    </div>
+   
     <div class="contenedor">
         <div class="cajaTrasera">
             <div class="cajaTrasera-Login">
@@ -48,6 +55,7 @@
     </div>
     <script src="script.js"></script>
     <script src="login.js"></script>
+    <script src="cambiarModo.js"></script>
 </body>
 
 </html>
